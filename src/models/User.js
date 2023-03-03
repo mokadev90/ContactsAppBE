@@ -11,6 +11,19 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	username: {
+		type: String,
+		unique: true,
+		required: true,
+	},
+	first_name: {
+		type: String,
+		required: true,
+	},
+	last_name: {
+		type: String,
+		required: true,
+	},
 });
 
 userSchema.pre('save', function (next) {
